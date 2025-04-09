@@ -81,8 +81,8 @@ struct Inst {
       return false;
   }
 
-  bool isLoad() { return (op == 47); }
-  bool isStore() { return (op == 48); }
+  bool isLoad() { return ((op == 52) | (op == 54) | (op == 58) | (op == 60) | (op == 62) | (op == 64) | (op == 66) | (op == 68) | (op == 69)); }
+  bool isStore() {return ((op == 53) | (op == 55) | (op == 59) | (op == 61) | (op == 63) | (op == 65) | (op == 67) | (op == 70)); }
 
   void dump(Tick startTick, double *out);
   void dumpTargets(Tick startTick, double *out);
